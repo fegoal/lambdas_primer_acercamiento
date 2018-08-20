@@ -36,13 +36,13 @@ public class Main {
 		//Para hacer busquedas sustituimos un item (35) en la lista de detalles.
 		f.getDetalles().set(6, new DetalleFactura(CONCEPTO, MODELO, 23.45));
 	
-		System.out.println("----------- todos los detalles ----------\n");
+		System.out.println("----------- todos los detalles ----------");
 		f.printDetails();
 		FacturaUtils.getElapsedTime(localTime1);
 		System.out.println("\n........................................\n");
 		
 		
-		System.out.println("----------- todos los detalles con for ----------\n");
+		System.out.println("----------- todos los detalles con for ----------");
 		localTime1 = LocalTime.now();
 		f.printDetailsFor();
 		FacturaUtils.getElapsedTime(localTime1);
@@ -51,26 +51,27 @@ public class Main {
 		
 		
 		
-		System.out.println("----------- PVP < 50.5 ----------\n");
+		System.out.println("----------- PVP < 50.5 ----------");
 		localTime1 = LocalTime.now();
 		f.printDetailsConPVPMenor(50.5);
 		FacturaUtils.getElapsedTime(localTime1);
 		System.out.println("\n........................................\n");
-		System.out.println("----------- PVP < 50.5 con for----------\n");
+		
+		System.out.println("----------- PVP < 50.5 con for----------");
 		localTime1 = LocalTime.now();
 		f.printDetailsConPVPMenorFor(50.5);
 		FacturaUtils.getElapsedTime(localTime1);
 		System.out.println("\n........................................\n");
 		
 		
-		System.out.println("----------- PVP > 50.5 ----------\n");
+		System.out.println("----------- PVP > 50.5 ----------");
 		f.printDetailsConPVPMayor(50.5);
 		FacturaUtils.getElapsedTime(localTime1);
 		
 		System.out.println("\n........................................\n");
 
 		
-		System.out.println("----------- TOTAL FACTURA  ----------\n");
+		System.out.println("----------- TOTAL FACTURA  ----------");
 		localTime1 = LocalTime.now();
 		f.printTotal();
 		FacturaUtils.getElapsedTime(localTime1);
